@@ -15,7 +15,7 @@ const CharacterMore = (props) => {
     // console.log(activeId[0]);
     // setCurrentData(activeId[0]);
     setData(activeId[0]);
-  }, []);
+  }, [props.match.params.id, setData]);
   // const [isLoading, setIsLoading] = useState(true);
 
   return (
