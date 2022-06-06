@@ -1,6 +1,6 @@
 .reviews-main-container {
-  background: #000 url("/public/assets/img/bg.jpg") no-repeat center
-    center/cover;
+  /* background: #000 url("/public/assets/img/bg.jpg") no-repeat center
+    center/cover; */
   width: 100vw;
 }
 .reviews-main-grid {
@@ -9,4 +9,10 @@
   margin: auto;
   padding: 5vh 20px;
   position: relative;
+}
+@media (max-width: 821px) {
+  .reviews-main-grid {
+    max-width: 100%;
+    border: none;
+  }
 }
