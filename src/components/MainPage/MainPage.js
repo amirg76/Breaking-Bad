@@ -46,7 +46,7 @@ const MainPage = () => {
     };
 
     fetchQuery();
-  }, [userQuery]);
+  }, [userQuery, setData]);
 
   return (
     <div className="main-container">

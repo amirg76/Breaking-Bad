@@ -1,14 +1,8 @@
 import React from "react";
 import "./CharacterGrid.css";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
-import { WIKIAPI, API, params } from "../Api/Api";
 import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterGrid = ({ isLoading, data }) => {
- 
   return isLoading ? (
     <h1>Loading...</h1>
   ) : (
