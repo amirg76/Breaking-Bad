@@ -1,0 +1,148 @@
+.header-continer {
+  width: 100vw;
+  height: 11vh;
+  background-color: hsl(220 12% 20%);
+}
+.logo {
+  width: 10vw;
+  height: 8vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  padding: 5vw 2vw;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  font-size: 1.5vw;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 5%;
+  top: -10px;
+  background-color: #fff;
+  transition: ease-in-out 0.25s;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 5%;
+  right: 0;
+  bottom: -10px;
+  background-color: #fff;
+  transition: ease-in-out 0.25s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+nav ul li a:hover::before {
+  width: 100%;
+}
+.toggle-button {
+  position: absolute;
+  top: 2vh;
+  right: 3vw;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 5vw;
+  height: 3vh;
+}
+.toggle-button .bar {
+  height: 0.5vh;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.nav-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 4vh;
+}
+
+@media (max-width: 820px) {
+  .logo {
+    margin-left: 2vw;
+  }
+  /* .toggle-button {
+    display: flex;
+  } */
+  nav ul li {
+    padding: 10vw 0vw;
+    /* display: none; */
+    /* text-align: center; */
+  }
+  /* nav ul li a {
+    font-size: 3vw;
+    width: 100%;
+  } */
+  nav ul {
+    /* width: 90%;
+    flex-direction: column;
+    align-items: flex-end; */
+    background-color: hsl(220 12% 20%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+  nav .responsive_nav {
+    transform: none;
+  }
+  .nav-links-active {
+    display: block;
+  }
+  .nav-close-btn {
+    position: absolute;
+    top: 2vh;
+    right: 5vw;
+  }
+  nav ul li a {
+    font-size: 3vh;
+  }
+  /* nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  } */
+
+  .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* nav ul{
+
+  } */
+}

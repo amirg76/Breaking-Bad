@@ -1,0 +1,13 @@
+.search {
+  height: 10vh;
+}
+.search-input {
+  display: block;
+  padding: 1vh;
+  font-size: 2vh;
+  border: 0;
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+  outline: none;
+}

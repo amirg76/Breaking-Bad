@@ -1,0 +1,12 @@
+.reviews-main-container {
+  background: #000 url("/public/assets/img/bg.jpg") no-repeat center
+    center/cover;
+  width: 100vw;
+}
+.reviews-grid {
+  border: 1px solid black;
+  max-width: 1100px;
+  margin: auto;
+  padding: 5vh 20px;
+  position: relative;
+}
