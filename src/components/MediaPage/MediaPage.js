@@ -72,7 +72,14 @@ const MediaPage = () => {
         console.error(error);
       });
   }, []);
-  return (
+  return isLoading ? (
+    <div className="spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  ) : (
     <div className="main-container">
       <div className="main-grid ">
         <MediaGrid

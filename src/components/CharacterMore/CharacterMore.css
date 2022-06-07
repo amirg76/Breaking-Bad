@@ -49,8 +49,11 @@
 }
 @media (max-width: 860px) {
   .more-detail-span {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     /* max-width: 100vw; */
+  }
+  .more-detail-bio {
+    font-size: 4vw;
   }
 }
 

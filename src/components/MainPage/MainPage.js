@@ -48,12 +48,20 @@ const MainPage = () => {
     fetchQuery();
   }, [userQuery, setData]);
 
-  return (
+  return isLoading ? (
+    <div className="spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  ) : (
     <div className="main-container">
       <div className="logo-main">
         <img src="./assets/img/logo.png" alt=""></img>
       </div>
       <Search getQuery={(e) => setUserQuery(e)} />
+
       <div
         className={
           navToggle

@@ -1,13 +1,15 @@
 .review-card {
-  cursor: pointer;
   background-color: transparent;
   height: 60vh;
-  /* color: #fff; */
+  color: #fff;
+  /* color: rgb(65, 39, 208); */
+  font-weight: bolder;
   border: 1px solid rgb(223, 210, 210);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  /* position: relative; */
 }
 .review-card-inner {
   /* position: relative;
@@ -31,7 +33,7 @@
 }
 .review-card-front h1 {
   font-size: 2vh;
-  border-bottom: 1px #333 solid;
+  border-bottom: 1px #fff solid;
   padding-bottom: 1.2vh;
 
   margin-top: 1.2vh;
@@ -47,16 +49,29 @@
   height: 40vh;
 }
 .review-card-user {
-  color: #333;
+  color: #fff;
   width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px #333 solid;
+  align-content: center;
+  border-top: 1px #fff solid;
   padding-top: 1.2vh;
 }
 .review-card-user h3 {
   font-size: 1.5vh;
+}
+.review-card-user button {
+  font-size: 2vh;
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  width: 5vw;
+  color: #eee;
+  cursor: pointer;
+  height: 50px;
+  margin: 3vh 0;
 }
 
 .review-card img {
@@ -68,7 +83,7 @@
 .review-card-back {
   display: flex;
   flex-direction: column;
-  background-color: #333;
+  background-color: #fff;
   color: white;
   padding-left: 0.5vw;
   padding: 2vw;
@@ -109,6 +124,9 @@
   }
   .review-card-back {
     padding: 5vw;
+  }
+  .review-card-user button {
+    width: 15vw;
   }
 }
 /* @media (max-width: 500px) {

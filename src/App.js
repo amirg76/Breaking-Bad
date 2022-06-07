@@ -11,10 +11,10 @@ import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <div>
+    <div className="main-app">
       <BrowserRouter forceRefresh={true}>
         <Header />
-        {/* <div className="sticky-header"> */}
+
         <Switch>
           <Route path="/" exact component={MainPage} />
           <Route path="/media" exact component={MediaPage} />

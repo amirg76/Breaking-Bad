@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  /* background: linear-gradient(325deg, #0dfc00 0%, #fc7900 50%, #5e8339 100%); */
+  background: url("/public/assets/img/media/reviews_back.jpg") no-repeat center
+    center/cover;
 }
 
 @media (max-width: 820px) {

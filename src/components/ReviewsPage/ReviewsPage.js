@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ReviewsGrid from "../ReviewsGrid/ReviewsGrid";
+import ReviewsPost from "../ReviewsPost/ReviewsPost";
+
 import "../ReviewsPage/ReviewsPage.css";
 const ReviewsPage = () => {
   const [reviewsData, setReviewsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -51,12 +54,32 @@ const ReviewsPage = () => {
     //   }
     // };
   }, []);
-  return (
-    <div className="reviews-main-container">
+
+  const showReviews = () => {
+    return (
       <div className="reviews-main-grid ">
-        <ReviewsGrid isLoading={isLoading} reviewsData={reviewsData} />
+        <ReviewsPost
+          reviewsData={reviewsData}
+          setReviewsData={setReviewsData}
+        />
+        <ReviewsGrid
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+          reviewsData={reviewsData}
+          setReviewsData={setReviewsData}
+        />
       </div>
+    );
+  };
+  return isLoading ? (
+    <div className="spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+  ) : (
+    <div className="reviews-main-container">{showReviews()}</div>
   );
 };
 
