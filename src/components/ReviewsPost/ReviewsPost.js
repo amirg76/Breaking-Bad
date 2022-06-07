@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../ReviewsPost/ReviewsPost.css";
 import { MOKEAPI } from "../Api/Api";
 import { newDate } from "../Tools/Date";
-import axios from "axios";
+// import axios from "axios";
 import PopUp from "../PopUp/PopUp";
 
 function ReviewsPost({ setReviewsData, reviewsData }) {
@@ -13,8 +13,6 @@ function ReviewsPost({ setReviewsData, reviewsData }) {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [IsSuccessPost, setIsSuccessPost] = useState(false);
-  const [typeOfPopup, setTypeOfPopup] = useState("");
-
   const handleInputChange = ({ target }) => {
     console.log(target.value);
     const { id, value } = target;
