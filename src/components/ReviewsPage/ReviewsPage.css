@@ -1,17 +1,17 @@
 .reviews-main-container {
   /* background: #000 url("/public/assets/img/bg.jpg") no-repeat center
     center/cover; */
-  width: 100vw;
+  width: 100%;
 }
 .reviews-main-grid {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   max-width: 80%;
   margin: auto;
-  padding: 5vh 20px;
+  padding: 5vh 1vw;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* flex-direction: column; */
+  align-items: flex-start;
 }
 @media (max-width: 821px) {
   .reviews-main-grid {

@@ -1,5 +1,5 @@
 form {
-  top: 10vh;
+  top: 15vh;
   position: sticky;
 }
 .main-form {
@@ -8,6 +8,7 @@ form {
   border: 1px solid black;
   justify-content: space-between;
   align-items: center;
+  margin-right: 1vw;
   width: 20vw;
   height: 60vh;
   background-color: rgb(241, 231, 231);

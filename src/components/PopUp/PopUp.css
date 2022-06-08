@@ -4,8 +4,9 @@
   left: 0;
   width: 100vw;
   bottom: 0;
+  background: url("/public/assets/img/logo.png");
   background-color: gray;
-  opacity: 0.9;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;

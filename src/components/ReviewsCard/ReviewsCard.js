@@ -18,31 +18,39 @@ function ReviewsCard({ data, handleDelete, handleUpdate }) {
   };
 
   return (
-    <div className="review-card">
-      <div className="review-card-front">
-        <h1>{data.title}</h1>
-        <h3>{data.content}</h3>
-      </div>
-      <div className="review-card-user">
-        <h3>{data.username}</h3>
-        {data.id > 25 && (
-          <>
-            <button onClick={handleConfirmDelete}>Delete</button>
-            <button onClick={handleUpdateClick}>Update</button>
-          </>
+    <>
+      <div
+        className={
+          !isPopUpOpen
+            ? "review-card review-scale "
+            : " review-card review-noscale"
+        }
+      >
+        <div className="review-card-front">
+          <h1>{data.title}</h1>
+          <h3>{data.content}</h3>
+        </div>
+        <div className="review-card-user">
+          <h3>{data.username}</h3>
+          {data.id > 25 && (
+            <>
+              <button onClick={handleConfirmDelete}>Delete</button>
+              <button onClick={handleUpdateClick}>Update</button>
+            </>
+          )}
+          <h3>{data.date}</h3>
+        </div>
+        {isPopUpOpen && (
+          <PopUp
+            setIsPopUpOpen={setIsPopUpOpen}
+            handleUpdate={handleUpdate}
+            handleDelete={handleDelete}
+            id={data.id}
+            typeOfPopup={typeOfPopup}
+          />
         )}
-        <h3>{data.date}</h3>
       </div>
-      {isPopUpOpen && (
-        <PopUp
-          setIsPopUpOpen={setIsPopUpOpen}
-          handleUpdate={handleUpdate}
-          handleDelete={handleDelete}
-          id={data.id}
-          typeOfPopup={typeOfPopup}
-        />
-      )}
-    </div>
+    </>
   );
 }
 
