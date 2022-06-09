@@ -57,7 +57,7 @@ const ReviewsPage = () => {
 
   const showReviews = () => {
     return (
-      <div className="reviews-main-grid ">
+      <div className="reviews-main-grid">
         <ReviewsPost
           reviewsData={reviewsData}
           setReviewsData={setReviewsData}

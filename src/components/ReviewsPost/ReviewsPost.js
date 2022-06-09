@@ -37,7 +37,8 @@ function ReviewsPost({ setReviewsData, reviewsData }) {
       // );
 
       setReviewsData((prev) => {
-        return [...prev, postedData.data];
+        // return [...prev, postedData.data];
+        return [postedData.data, ...prev];
       });
       setInputValues({
         newUserName: "",
@@ -51,7 +52,6 @@ function ReviewsPost({ setReviewsData, reviewsData }) {
     }
   };
 
-  // const successPost = () => {};
   return isLoading ? (
     <div className="spinner">
       <div></div>

@@ -20,6 +20,7 @@ const MediaGrid = ({ isLoading, imgData, quoteData, trivia }) => {
     return quoteObj;
   });
   // };
+
   triviaArr = trivia.map((element) => {
     const quoteObj = { text: element.text };
     return quoteObj;

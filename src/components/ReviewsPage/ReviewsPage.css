@@ -17,5 +17,8 @@
   .reviews-main-grid {
     max-width: 100%;
     border: none;
+    align-items: center;
+
+    flex-direction: column;
   }
 }

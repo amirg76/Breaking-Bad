@@ -2,6 +2,7 @@ import React from "react";
 import "./MainPage.css";
 // import { Link } from "react-router-dom";
 
+// import { moreDetail } from "../MoreDetials";
 import { API } from "../Api/Api";
 import { useEffect, useState, useContext } from "react";
 import { myContext } from "../Context/mycontext";
@@ -16,19 +17,7 @@ const MainPage = () => {
   const [userQuery, setUserQuery] = useState("");
 
   const [isLoading, setIsLoading] = useState(true);
-  // useEffect(() => {
-  //   const fetchcharacters = async () => {
-  //     try {
-  //       const response = await API.get("/characters");
-  //       console.log(response.data);
-  //       setData(response.data);
-  //       setIsLoading(false);
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   };
-  //   fetchcharacters();
-  // }, []);
+
   useEffect(() => {
     const fetchQuery = async () => {
       try {
@@ -36,8 +25,7 @@ const MainPage = () => {
         //   const response = await API.get(`/characters?name=${userQuery}`);
         // }
         const response = await API.get(`/characters?name=${userQuery}`);
-        console.log(userQuery);
-        console.log(response.data);
+
         setData(response.data);
         setIsLoading(false);
       } catch (error) {

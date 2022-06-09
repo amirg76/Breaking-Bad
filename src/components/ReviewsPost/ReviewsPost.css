@@ -77,9 +77,14 @@ form {
   background-color: #06b;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1200px) {
+  form {
+    top: 0vh;
+    margin-bottom: 1vh;
+    position: relative;
+  }
   .main-form {
-    width: 70vw;
+    width: 90vw;
     height: 50vh;
   }
   .main-form input,
@@ -91,5 +96,19 @@ form {
     font-size: 18px;
     height: 5vh;
     width: 15vw;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 4vw;
+  }
+  .main-form input,
+  .main-form textarea {
+    font-size: 3vw;
+  }
+  .submit-btn {
+    font-size: 3vw;
+    height: 5vh;
+    width: 20vw;
   }
 }

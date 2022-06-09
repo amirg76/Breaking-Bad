@@ -10,9 +10,9 @@ const CharacterGrid = ({ isLoading, data }) => {
       {data.map(
         (element) =>
           element.char_id !== 39 && (
-            <>
-              <CharacterCard key={element.char_id} card={element} />
-            </>
+            <div key={element.char_id}>
+              <CharacterCard card={element} />
+            </div>
           )
       )}
     </section>

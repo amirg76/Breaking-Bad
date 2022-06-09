@@ -37,6 +37,7 @@
   text-align: center;
   width: 7vw;
 }
+
 .popup-card-update {
   width: 20vw;
   height: 50vh;
@@ -84,19 +85,25 @@
   text-align: center;
   width: 7vw;
 }
+.buttons-update button:hover,
+.popup-card-delete button:hover {
+  background-color: blue;
+  color: #eee;
+}
 .popup-hidden {
   display: none;
 }
 
 @media all and (max-width: 830px) {
-  .popup-card-update input {
-    font-size: 0.8vw;
-
-    width: 12vw;
+  .popup-card-update input,
+  .popup-card-update textarea {
+    font-size: 2.5vw;
+    width: 50vw;
   }
   .buttons-update button {
-    font-size: 1.5vw;
-    height: 2vh;
+    font-size: 2.5vw;
+    height: 3vh;
+    width: 20vw;
   }
   .popup-card-update {
     width: 100%;

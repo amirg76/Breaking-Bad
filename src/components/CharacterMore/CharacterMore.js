@@ -1,71 +1,91 @@
-import { useEffect, useContext } from "react";
-import { myContext } from "../Context/mycontext";
+import { useEffect, useState } from "react";
+// import { myContext } from "../Context/mycontext";
 import "../CharacterMore/CharacterMore.css";
-
-import { moreDetail } from "../MoreDetials";
+import { MOKEAPI } from "../Api/Api";
+// import { moreDetail } from "../MoreDetials";
 const CharacterMore = (props) => {
-  const { data, setData } = useContext(myContext);
+  // const { data, setData } = useContext(myContext);
+  // const [moreData, setMoreData] = useState([]);
+  const [currentData, setCurrentData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const char_id = props.match.params.id;
-    const activeId = moreDetail.filter((element) => {
-      return element.char_id === Number(char_id);
-    });
+    const fetchcharacters = async () => {
+      const char_id = props.match.params.id;
+      try {
+        const { data } = await MOKEAPI.get("/breaking-bad-more");
 
-    // console.log(activeId[0]);
-    // setCurrentData(activeId[0]);
-    setData(activeId[0]);
-  }, [props.match.params.id, setData]);
-  // const [isLoading, setIsLoading] = useState(true);
+        // const getMoreData = response.data;
 
-  return (
+        const activeId = data.filter((element) => {
+          console.log(element);
+          return element.newDetials.char_id === Number(char_id);
+        });
+        console.log(activeId[0].newDetials);
+        setCurrentData(activeId[0].newDetials);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchcharacters();
+  }, [props.match.params.id, setCurrentData]);
+
+  return isLoading ? (
+    <div className="spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  ) : (
     <div className="more-detail-continer">
-      {/* {console.log(currnetData)} */}
-      <img src={data.img} className="more-detail-img" alt=""></img>
-      <h1 className="more-detail-header">{data.name}</h1>
-      <div className="more-detail-bio">{data.bio}</div>
+      {console.log(currentData)}
+      <img src={currentData.img} className="more-detail-img" alt=""></img>
+      <h1 className="more-detail-header">{currentData.name}</h1>
+      <div className="more-detail-bio">{currentData.bio}</div>
       <div className="more-detail-overview">
         <h3 className="more-detail-overview_header">Overview</h3>
         <div className="more-detail-overview_lines">
-          <h5>Born:</h5>
-          <span className="more-detail-span">{data.born}</span>
+          <h6>Born:</h6>
+          <span className="more-detail-span">{currentData.born}</span>
         </div>
         <div className="more-detail-overview_lines gray-back">
-          <h5>Height:</h5>
-          <span className="more-detail-span ">{data.height}</span>
+          <h6>Height:</h6>
+          <span className="more-detail-span ">{currentData.height}</span>
         </div>
       </div>
       <div className="more-detail-overview">
         <h3 className="more-detail-overview_header">Family</h3>
         <div className="more-detail-overview_lines">
-          <h5>Spouse:</h5>
-          <span className="more-detail-span">{data.spouse}</span>
+          <h6>Spouse:</h6>
+          <span className="more-detail-span">{currentData.spouse}</span>
         </div>
         <div className="more-detail-overview_lines gray-back">
-          <h5>Children:</h5>
-          <span className="more-detail-span">{data.children}</span>
+          <h6>Children:</h6>
+          <span className="more-detail-span">{currentData.children}</span>
         </div>
         <div className="more-detail-overview_lines">
-          <h5>Parents:</h5>
-          <span className="more-detail-span">{data.parents}</span>
+          <h6>Parents:</h6>
+          <span className="more-detail-span">{currentData.parents}</span>
         </div>
       </div>
       <div className="more-detail-overview">
         <h3 className="more-detail-overview_header">Trivia</h3>
         <div className="more-detail-overview_lines gray-back">
-          -<span className="more-detail-span">{data.trivia1}</span>
+          -<span className="more-detail-span">{currentData.trivia1}</span>
         </div>
         <div className="more-detail-overview_lines">
-          -<span className="more-detail-span">{data.trivia2}</span>
+          -<span className="more-detail-span">{currentData.trivia2}</span>
         </div>
         <div className="more-detail-overview_lines gray-back">
-          -<span className="more-detail-span">{data.trivia3}</span>
+          -<span className="more-detail-span">{currentData.trivia3}</span>
         </div>
         <div className="more-detail-overview_lines">
-          -<span className="more-detail-span">{data.trivia4}</span>
+          -<span className="more-detail-span">{currentData.trivia4}</span>
         </div>
         <div className="more-detail-overview_lines gray-back">
-          -<span className="more-detail-span">{data.trivia5}</span>
+          -<span className="more-detail-span">{currentData.trivia5}</span>
         </div>
       </div>
     </div>
