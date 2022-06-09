@@ -119,6 +119,7 @@
   }
   .popup-card-update {
     width: 100%;
+    height: 50vh;
   }
   .popup-card-delete {
     width: 100%;
