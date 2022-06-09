@@ -37,8 +37,8 @@ function ReviewsPost({ setReviewsData, reviewsData }) {
       // );
 
       setReviewsData((prev) => {
-        // return [...prev, postedData.data];
-        return [postedData.data, ...prev];
+        return [...prev, postedData.data];
+        // return [postedData.data, ...prev];
       });
       setInputValues({
         newUserName: "",
