@@ -13,7 +13,7 @@
   /* flex-direction: column; */
   align-items: flex-start;
 }
-@media (max-width: 821px) {
+@media (max-width: 1200px) {
   .reviews-main-grid {
     max-width: 100%;
     border: none;

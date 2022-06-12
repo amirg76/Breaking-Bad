@@ -57,23 +57,6 @@ nav ul li a:hover::after {
 nav ul li a:hover::before {
   width: 100%;
 }
-.toggle-button {
-  position: absolute;
-  top: 2vh;
-  right: 3vw;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 5vw;
-  height: 3vh;
-}
-.toggle-button .bar {
-  height: 0.5vh;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 10px;
-}
-
 .nav-btn {
   cursor: pointer;
   background: transparent;
@@ -88,22 +71,10 @@ nav ul li a:hover::before {
   .logo {
     margin-left: 2vw;
   }
-  /* .toggle-button {
-    display: flex;
-  } */
   nav ul li {
     padding: 10vw 0vw;
-    /* display: none; */
-    /* text-align: center; */
   }
-  /* nav ul li a {
-    font-size: 3vw;
-    width: 100%;
-  } */
   nav ul {
-    /* width: 90%;
-    flex-direction: column;
-    align-items: flex-end; */
     background-color: hsl(220 12% 20%);
     position: fixed;
     top: 0;
@@ -120,9 +91,7 @@ nav ul li a:hover::before {
   nav .responsive_nav {
     transform: none;
   }
-  .nav-links-active {
-    display: block;
-  }
+
   .nav-close-btn {
     position: absolute;
     top: 2vh;
@@ -131,18 +100,8 @@ nav ul li a:hover::before {
   nav ul li a {
     font-size: 3vh;
   }
-  /* nav {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-  } */
-
   .nav-btn {
     visibility: visible;
     opacity: 1;
   }
-  /* nav ul{
-
-  } */
 }

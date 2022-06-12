@@ -80,7 +80,7 @@
   transform: scale(1.01);
 }
 
-@media (max-width: 821px) {
+@media (max-width: 1200px) {
   .review-card {
     height: 70vh;
     width: 90%;

@@ -19,11 +19,6 @@ const Header = () => {
   return (
     <nav className="header-continer">
       <img className="logo" src="/assets/img/logo.png" alt=""></img>
-      {/* <a href="#" className="toggle-button">
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </a> */}
 
       <ul ref={navRef}>
         <li>

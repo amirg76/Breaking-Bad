@@ -1,40 +1,33 @@
-import React from "react";
 import "./MainPage.css";
-// import { Link } from "react-router-dom";
 
-// import { moreDetail } from "../MoreDetials";
 import { API } from "../Api/Api";
 import { useEffect, useState, useContext } from "react";
 import { myContext } from "../Context/mycontext";
-// import FetchApi from "../FetchApi/FetchApi";
+import useFetchData from "../../hooks/useFetchData";
 import CharacterGrid from "../CharacterGrid/CharacterGrid";
 import Search from "../Search/Search";
-// import axios from "axios";
 
 const MainPage = () => {
-  const { data, setData, navToggle } = useContext(myContext);
-  // const [data, setData] = useState([]);
+  // const { data, setData } = useContext(myContext);
+  // const { data, setData, navToggle } = useContext(myContext);
+
   const [userQuery, setUserQuery] = useState("");
+  const [data, fetchQuery, isLoading] = useFetchData("API", userQuery);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchQuery = async () => {
-      try {
-        // if (userQuery !== "") {
-        //   const response = await API.get(`/characters?name=${userQuery}`);
-        // }
-        const response = await API.get(`/characters?name=${userQuery}`);
-
-        setData(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-
-    fetchQuery();
-  }, [userQuery, setData]);
+  // useEffect(() => {
+  //   const fetchQuery = async () => {
+  //     try {
+  //       const response = await API.get(`/characters?name=${userQuery}`);
+  //       setData(response.data);
+  //       setIsLoading(false);
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   };
+  //   fetchQuery("API", userQuery);
+  // }, [data, fetchQuery]);
+  // }, [userQuery, setData]);
 
   return isLoading ? (
     <div className="spinner">
@@ -51,13 +44,14 @@ const MainPage = () => {
       <Search getQuery={(e) => setUserQuery(e)} />
 
       <div
-        className={
-          navToggle
-            ? "main-grid nav-toggle-hidden"
-            : " main-grid nav-toggle-show"
-        }
+        className="main-grid"
+        // className={
+        //   navToggle
+        //     ? "main-grid nav-toggle-hidden"
+        //     : " main-grid nav-toggle-show"
+        // }
       >
-        <CharacterGrid isLoading={isLoading} data={data} />
+        <CharacterGrid data={data} />
       </div>
     </div>
   );

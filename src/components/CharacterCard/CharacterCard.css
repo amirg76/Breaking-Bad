@@ -58,7 +58,6 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 0;
-  /* padding-bottom: 1vh; */
 }
 .card strong {
   padding-left: 0.1vw;

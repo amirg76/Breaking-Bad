@@ -1,6 +1,6 @@
 import "./CharacterCard.css";
-
 import { Link } from "react-router-dom";
+
 const CharacterCard = ({ card }) => {
   return (
     <div className="card">

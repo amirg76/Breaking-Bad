@@ -21,9 +21,6 @@ function App() {
           <Route path="/reviews" exact component={ReviewsPage} />
           <Route path="/:id" exact component={CharacterMore} />
         </Switch>
-        {/* </div> */}
-        {/* <MainPage /> */}
-        {/* <MediaPage /> */}
       </BrowserRouter>
     </div>
   );
