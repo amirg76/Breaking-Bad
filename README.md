@@ -1,5 +1,11 @@
 # Breaking Bad Fan's Tv Show App With Api's
 
+<img src="/public/assets/screen-shots/home-page.png" width="500">
+<img src="/public/assets/screen-shots/media-page.png" width="500">
+<img src="/public/assets/screen-shots/review-page.png" width="500">
+
+
+
 **Version 1.00**
 
 Code and document for the Breaking Bad Fan's Tv Show App With Api's.
@@ -22,13 +28,13 @@ I use REACT HOOKS like USEREF,USEEFFECT,USECONTEXT.
 
 I use REACT COMPONENTS STYLE fontawsome, for the navbar.
 
-## I use 3 API:
+## I Use 3 API:
 
 - https://www.breakingbadapi.com/api
 - https://online-movie-database.p.rapidapi.com/title
 - MOKEAPI to use CRUD.
 
-\*\* What Languege I Use
+### What Languege I Use
 
 - I made it with CSS AND JAVA-SCRIPT AND REACT.
 - I use a lot of method and separate the code
