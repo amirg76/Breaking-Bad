@@ -28,6 +28,8 @@ I use REACT HOOKS like USEREF,USEEFFECT,USECONTEXT.
 
 I use REACT COMPONENTS STYLE fontawsome, for the navbar.
 
+This app is responsive for all media screen.
+
 ## I Use 3 API:
 
 - https://www.breakingbadapi.com/api
